@@ -8,9 +8,10 @@ function moneyConverter(){
 
 //task 2
 function reverseString(str) {
-	console.log(str.split('').reverse().join(''));
+	return str.split('').reverse().join('');
 }
-reverseString('Diana');
+console.log(reverseString('Diana'));
+
 
  //task 3
 function printStairs(n) {
@@ -28,17 +29,17 @@ printStairs(3);
  for (let i = start; i <= end; i++) {
  	result += i;
  }
- 	console.log(result);
+ 	return result;
  }
-sumRange(2, 4);
-sumRange(-1, 3);
+console.log(sumRange(2, 4),(-1, 3)); //9 , 3
+
 
 //task 5 
 function min(a,b,c){
-	console.log(Math.min(a,b,c));
+	return Math.min(a,b,c);
 }	
-min(10,5,11);	
-min(3,8,4);	
+console.log(min(10,5,11),(3,8,4));	// 5 , 4
+	
 
 //task 6
 function printPyramid(n){
@@ -57,7 +58,7 @@ printPyramid(3);
 
 //task 7
 function firstAndLastToUpper(str) {
-	console.log(str.charAt(0).toUpperCase() + str.slice(1, str.length - 1) + str.charAt(str.length - 1).toUpperCase());
+	console.log(str[0].toUpperCase() + str.slice(1, str.length - 1) + str.charAt(str.length - 1).toUpperCase());
 }
 firstAndLastToUpper('abc');
 
@@ -74,10 +75,10 @@ function cursorCheck(str) {
 	} else if (str.includes('ostap')) {
 		result = true;
 	}
-		console.log(result);
+		return result;
  }
-cursorCheck('Hello I am OstaP') // true
-cursorCheck('Superman is here') // false
+console.log(cursorCheck('Hello I am OstaP')) // true
+console.log(cursorCheck('Superman is here')) // false
 
 //task 9
 function toUppercase (str) {
@@ -137,9 +138,9 @@ function toUppercase (str) {
 			break;
 		}
 	}
-	console.log(str);
+	return str;
 }	
-toUppercase('i love this task');
+console.log(toUppercase('i love this task'));
 
 //task 10
 function removeDuplicationLetters(str) { 
@@ -164,13 +165,11 @@ function fibonacci(n) {
 		a = b
 		b = result
 	}
-	console.log(result);
+	 return result;
 
  }
-fibonacci(3) // 2
-fibonacci(5) // 5
-fibonacci(7) // 13
-
+console.log(fibonacci(3),(5)); // 2, 5
+console.log(fibonacci(7));// 13
 
 
 
