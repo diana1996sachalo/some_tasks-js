@@ -1,9 +1,15 @@
 // task 1
 document.querySelector('.convert').addEventListener('click', moneyConverter);
 function moneyConverter(){
-	let dol = document.getElementById('inputdol').value;
-	document.getElementById('outputuah').innerHTML = dol * 26.80;
+        const RATE = 26.80;
 
+ const value = parseFloat(document.getElementById('inputdol').value);
+       
+        const result = value * RATE;
+        document.getElementById('outputuah').innerHTML = result;
+}
+function conver(value, rate = 26.80) {
+  return value * rate;
 }
 
 //task 2
@@ -31,14 +37,14 @@ printStairs(3);
  }
  	return result;
  }
-console.log(sumRange(2, 4),(-1, 3)); //9 , 3
+console.log(sumRange(2, 4),sumRange(-1, 3)); //9 , 5
 
 
 //task 5 
 function min(a,b,c){
 	return Math.min(a,b,c);
 }	
-console.log(min(10,5,11),(3,8,4));	// 5 , 4
+console.log(min(10,5,11),min(3,8,4));	// 5 , 3
 	
 
 //task 6
@@ -58,9 +64,9 @@ printPyramid(3);
 
 //task 7
 function firstAndLastToUpper(str) {
-	console.log(str[0].toUpperCase() + str.slice(1, str.length - 1) + str.charAt(str.length - 1).toUpperCase());
+	return str[0].toUpperCase() + str.slice(1, str.length - 1) + str.charAt(str.length - 1).toUpperCase();
 }
-firstAndLastToUpper('abc');
+console.log(firstAndLastToUpper('abc'));
 
 
 
@@ -168,8 +174,8 @@ function fibonacci(n) {
 	 return result;
 
  }
-console.log(fibonacci(3),(5)); // 2, 5
-console.log(fibonacci(7));// 13
+console.log(fibonacci(3),fibonacci(5),fibonacci(7)); // 2, 5 ,13
+
 
 
 
